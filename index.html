@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>永無島三部曲｜國小國語文遊戲式線上測驗總入口</title>
+  <meta name="description" content="結合彼得潘永無島奇幻冒險劇情的國小國語文（低、中、高年級）遊戲式線上測驗入口網站。涵蓋第一至第三學習階段課綱能力指標、五大互動題型、夥伴語音回饋與榮譽證書。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Noto+Sans+TC:wght@500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=1">
+</head>
+<body data-theme="hub">
+  <div id="bg" class="bg"></div>
+  <canvas id="dust"></canvas>
+
+  <div id="app">
+    <!-- 頂部列：左上主標題 ＋ 右側頁籤選單 -->
+    <header class="top-row">
+      <div class="hub-head">
+        <p class="badge">✦ 國小國語文能力指標題目總匯 ✦</p>
+        <h1 class="logo">永無島三部曲<span>星空仙塵 × 叢林秘境 × 暮光決戰</span></h1>
+      </div>
+
+      <nav class="nav-tabs glass" role="tablist" aria-label="入口網站主選單">
+        <button class="nav-tab active" data-tab="hub" role="tab" aria-selected="true">
+          <span class="tab-ic">🏰</span><span class="tab-lbl">網站連結</span>
+        </button>
+        <button class="nav-tab" data-tab="story" role="tab" aria-selected="false">
+          <span class="tab-ic">📖</span><span class="tab-lbl">故事與關卡</span>
+        </button>
+        <button class="nav-tab" data-tab="cast" role="tab" aria-selected="false">
+          <span class="tab-ic">🧚</span><span class="tab-lbl">角色圖鑑</span>
+        </button>
+        <button class="nav-tab" data-tab="guide" role="tab" aria-selected="false">
+          <span class="tab-ic">🎮</span><span class="tab-lbl">玩法與課綱指標</span>
+        </button>
+      </nav>
+    </header>
+
+    <!-- 主內容區（100dvh 單一螢幕切換頁籤） -->
+    <main class="screens">
+
+      <!-- ==================== TAB 1：網站連結 ==================== -->
+      <section id="sec-hub" class="screen active" role="tabpanel">
+        <div class="trilogy-grid" id="trilogy-grid">
+          <!-- 第一部 -->
+          <article class="tcard glass theme-b1" data-book="0">
+            <div class="tcard-cover" style="background-image:url('assets/img/cover1.webp')">
+              <span class="tcard-stage">第一部｜低年級</span>
+            </div>
+            <div class="tcard-body">
+              <div class="tcard-title">
+                <h2>永無島的初次飛翔</h2>
+                <p>星空、仙塵與遺失的玩具</p>
+              </div>
+              <p class="tcard-desc">麥克心愛的獨眼泰迪熊被怪風吹進神祕角落！與奇妙仙子、失落男孩組成「尋熊小隊」，跨越精靈山谷與滴答沙灘找回小熊。</p>
+              <div class="tcard-tags">
+                <span>注音拼讀</span><span>部首筆畫</span><span>量詞疊字</span><span>標點與閱讀</span><span>四字語詞</span>
+              </div>
+              <div class="tcard-partners">
+                <small>同行夥伴：</small>
+                <div class="mini-avatars">
+                  <span class="av" title="麥克"><img src="assets/img/michael_darling.webp" alt="麥克" class="av-michael"></span>
+                  <span class="av" title="奇妙仙子"><img src="assets/img/tinker_bell.webp" alt="奇妙仙子" class="av-tink"></span>
+                  <span class="av" title="史萊特利"><img src="assets/img/slightly.webp" alt="史萊特利" class="av-slightly"></span>
+                  <span class="av" title="圖特斯"><img src="assets/img/tootles.webp" alt="圖特斯" class="av-tootles"></span>
+                </div>
+              </div>
+              <div class="tcard-actions">
+                <a class="btn-main small" href="https://grethel1988-ai.github.io/neverland-flight-1/" target="_blank" rel="noopener">出發冒險 ▶</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 第二部 -->
+          <article class="tcard glass theme-b2" data-book="1">
+            <div class="tcard-cover" style="background-image:url('assets/img/cover2.webp')">
+              <span class="tcard-stage">第二部｜中年級</span>
+            </div>
+            <div class="tcard-body">
+              <div class="tcard-title">
+                <h2>永無島的失落篇章</h2>
+                <p>公主、謊言與隱密樹屋</p>
+              </div>
+              <p class="tcard-desc">海盜史密在密林四處張貼錯誤告示牌企圖佔領島嶼！跟隨虎蓮公主手上的發光幾何刺青與約翰的雨傘推理，破解文字陷阱、保衛隱密樹屋。</p>
+              <div class="tcard-tags">
+                <span>形近音近字</span><span>部件查字典</span><span>詞義推論</span><span>修辭與句型重組</span><span>段落摘要</span>
+              </div>
+              <div class="tcard-partners">
+                <small>同行夥伴：</small>
+                <div class="mini-avatars">
+                  <span class="av" title="虎蓮公主"><img src="assets/img/tiger_lily.webp" alt="虎蓮公主" class="av-tiger"></span>
+                  <span class="av" title="約翰"><img src="assets/img/john_darling.webp" alt="約翰" class="av-john"></span>
+                  <span class="av" title="雙胞胎"><img src="assets/img/the_twins.webp" alt="雙胞胎" class="av-twins"></span>
+                  <span class="av" title="溫蒂"><img src="assets/img/wendy_darling.webp" alt="溫蒂" class="av-wendy"></span>
+                </div>
+              </div>
+              <div class="tcard-actions">
+                <a class="btn-main small" href="https://grethel1988-ai.github.io/neverland-lost-chapter-2/" target="_blank" rel="noopener">出發冒險 ▶</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 第三部 -->
+          <article class="tcard glass theme-b3" data-book="2">
+            <div class="tcard-cover" style="background-image:url('assets/img/cover3.webp')">
+              <span class="tcard-stage">第三部｜高年級</span>
+            </div>
+            <div class="tcard-body">
+              <div class="tcard-title">
+                <h2>永無島的黃昏</h2>
+                <p>影子、時鐘與不沉之船</p>
+              </div>
+              <p class="tcard-desc">虎克船長在「快樂羅傑號」設下黑巫術文字結界，奪走彼得潘的影子！在夕陽沉入海平面前，潛入海盜船看穿航海日誌的矛盾，斬斷黑巫術鎖鏈！</p>
+              <div class="tcard-tags">
+                <span>多音字與成語</span><span>標點修辭效果</span><span>事實與觀點</span><span>議論文與摘要</span><span>多元文本思辨</span>
+              </div>
+              <div class="tcard-partners">
+                <small>同行夥伴：</small>
+                <div class="mini-avatars">
+                  <span class="av" title="彼得潘"><img src="assets/img/peter_pan.webp" alt="彼得潘" class="av-peter"></span>
+                  <span class="av" title="溫蒂"><img src="assets/img/wendy_darling.webp" alt="溫蒂" class="av-wendy"></span>
+                  <span class="av" title="約翰"><img src="assets/img/john_darling.webp" alt="約翰" class="av-john"></span>
+                  <span class="av" title="奇妙仙子"><img src="assets/img/tinker_bell.webp" alt="奇妙仙子" class="av-tink"></span>
+                </div>
+              </div>
+              <div class="tcard-actions">
+                <a class="btn-main small" href="https://grethel1988-ai.github.io/neverland-twilight-3/" target="_blank" rel="noopener">出發冒險 ▶</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- 底部 VN 導覽對話框 -->
+        <div class="vn-box hub-vn">
+          <div class="face" id="hub-face"><img src="assets/img/peter_pan.webp" alt="彼得潘" class="av-img-peter_pan"></div>
+          <div class="vn-name" id="hub-speaker">彼得潘</div>
+          <p class="vn-text" id="hub-vn-text"></p>
+          <button class="btn-voice" id="btn-next-tip" title="換一位角色說話">💬 聽夥伴說</button>
+        </div>
+      </section>
+
+      <!-- ==================== TAB 2：故事與關卡 ==================== -->
+      <section id="sec-story" class="screen" role="tabpanel">
+        <div class="sub-header">
+          <div class="book-switch" id="story-book-switch">
+            <button class="bs-btn on" data-b="0">🍀 第一部：初次飛翔（低年級）</button>
+            <button class="bs-btn" data-b="1">🗺️ 第二部：失落篇章（中年級）</button>
+            <button class="bs-btn" data-b="2">⚓ 第三部：永無島的黃昏（高年級）</button>
+          </div>
+          <a id="story-play-link" class="btn-main small" href="https://grethel1988-ai.github.io/neverland-flight-1/" target="_blank" rel="noopener">立即挑戰 ▶</a>
+        </div>
+
+        <div class="story-layout">
+          <!-- 左側：前情提要與試煉特色 -->
+          <aside class="story-left glass">
+            <div class="story-cover-banner" id="st-cover-banner">
+              <h2 id="st-book-title">永無島的初次飛翔</h2>
+              <p id="st-book-sub">星空、仙塵與遺失的玩具</p>
+            </div>
+            <div class="vn-box story-prologue-box">
+              <div class="vn-name" id="st-pro-label">前情提要</div>
+              <p class="vn-text" id="st-prologue"></p>
+            </div>
+            <div class="story-meta-row" id="st-meta-row"></div>
+          </aside>
+
+          <!-- 右側：關卡地圖與對話模擬 -->
+          <div class="story-right">
+            <div class="stage-cards" id="stage-cards"></div>
+            <div class="vn-box stage-preview-vn">
+              <div class="face" id="sp-face"><img src="assets/img/tinker_bell_annoyed.webp" alt="" class="av-img-tinker_bell_annoyed"></div>
+              <div class="vn-name" id="sp-name">關卡情境預覽</div>
+              <p class="vn-text" id="sp-text"></p>
+              <button class="btn-voice" id="btn-sp-next">下一句對話 ▼</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== TAB 3：角色圖鑑 ==================== -->
+      <section id="sec-cast" class="screen" role="tabpanel">
+        <div class="sub-header">
+          <div class="book-switch" id="cast-filter">
+            <button class="bs-btn on" data-f="all">✨ 全部角色（13）</button>
+            <button class="bs-btn" data-f="hero">🌟 核心與達林家</button>
+            <button class="bs-btn" data-f="boys">🦊 失落男孩與部落</button>
+            <button class="bs-btn" data-f="pirate">🏴‍☠️ 海盜與巨鱷</button>
+          </div>
+        </div>
+
+        <div class="cast-layout">
+          <div class="cast-grid glass" id="cast-grid"></div>
+
+          <aside class="cast-detail glass" id="cast-detail">
+            <div class="cd-top">
+              <div class="cd-portrait" id="cd-portrait">
+                <button class="cd-mood-btn" id="cd-mood-btn" hidden title="切換生氣紅光狀態">💢 切換生氣紅光</button>
+              </div>
+              <div class="cd-info">
+                <span class="cd-role-tag" id="cd-role-tag">核心領袖</span>
+                <h2 id="cd-name">彼得潘<span>Peter Pan</span></h2>
+                <p class="cd-title" id="cd-title">失去影子的飛翔少年</p>
+                <div class="cd-appear" id="cd-appear"></div>
+              </div>
+            </div>
+            <p class="cd-bio" id="cd-bio"></p>
+            <div class="vn-box cd-vn">
+              <div class="vn-name" id="cd-vn-name">彼得潘</div>
+              <div class="cd-vn-row">
+                <div class="face" id="cd-face"><img src="assets/img/peter_pan.webp" alt="彼得潘" class="av-img-peter_pan"></div>
+                <p class="vn-text" id="cd-vn-quote"></p>
+              </div>
+              <div class="cd-quote-btns">
+                <button class="q-chip on" data-qtype="hello">👋 登場招呼</button>
+                <button class="q-chip" data-qtype="right">⭕ 答對誇獎</button>
+                <button class="q-chip" data-qtype="wrong">❌ 答錯鼓勵</button>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- ==================== TAB 4：玩法與課綱指標 ==================== -->
+      <section id="sec-guide" class="screen" role="tabpanel">
+        <div class="sub-header">
+          <div class="book-switch" id="guide-switch">
+            <button class="bs-btn on" data-g="rules">🎮 遊戲機制與五大互動題型</button>
+            <button class="bs-btn" data-g="inds">📊 108課綱國語文能力指標對照表</button>
+          </div>
+        </div>
+
+        <!-- 子視圖 A：遊戲方式與五大題型 -->
+        <div id="guide-rules" class="guide-pane active">
+          <div class="rules-top-grid">
+            <div class="rcard glass">
+              <div class="rcard-head"><span class="rc-ic">⚔️</span><h3>三種冒險難度＆生命象徵</h3></div>
+              <p>每次出題皆啟動<strong>「能力指標保證機制」</strong>，確保該年段每個學習表現至少出現 1 題，約 30% 為拖曳互動題：</p>
+              <ul class="rc-list">
+                <li><b>入門難度（25 題）</b>：5 顆生命（見習飛行員／叢林探險隊／暮光水手）</li>
+                <li><b>進階難度（40 題）</b>：7 顆生命（仙塵冒險家／部落勇士／斬影劍士）</li>
+                <li><b>傳奇難度（50 題）</b>：10 顆生命（永無島英雄／樹屋守護者／不沉船長）</li>
+              </ul>
+              <div class="life-showcase">
+                <span>Ⅰ 低年級：🧸 小熊軟糖</span>
+                <span>Ⅱ 中年級：🪶 勇氣羽毛</span>
+                <span>Ⅲ 高年級：🧭 航海羅盤</span>
+              </div>
+            </div>
+
+            <div class="rcard glass">
+              <div class="rcard-head"><span class="rc-ic">💬</span><h3>四位夥伴陪考＆嚴謹測驗回饋</h3></div>
+              <p>每部作品皆可從 <strong>4 位專屬夥伴</strong>中挑選 1 位同行，在全螢幕無捲軸的視覺小說介面中闖關：</p>
+              <ul class="rc-list">
+                <li><b>符合人設的幽默回饋</b>：每次答對或答錯，夥伴皆會給予多句專屬語氣鼓勵或傲嬌吐槽。</li>
+                <li><b>正式測驗防弊設計</b>：作答後僅標示所選為正確（綠光）或錯誤（紅框震動），<strong>不直接洩露正確答案與解析</strong>，激發學生再次思考。</li>
+                <li><b>榮譽證書動態列印</b>：通關後自動核發印有玩家姓名、同行夥伴、挑戰難度、百分制得分與三階勳章的榮譽證書，支援一鍵列印。</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 五大互動題型互動展示台 -->
+          <div class="qtype-showcase glass">
+            <div class="qt-tabs" id="qt-tabs">
+              <span class="qt-title">🖐️ 五大題型互動預覽（全題目採教育部標準標楷體）：</span>
+              <button class="qt-btn on" data-qt="mc">1. 四選一選擇題</button>
+              <button class="qt-btn" data-qt="match">2. 拖曳配對題</button>
+              <button class="qt-btn" data-qt="fill">3. 拖曳填空題</button>
+              <button class="qt-btn" data-qt="cat">4. 分類題</button>
+              <button class="qt-btn" data-qt="order">5. 排序／句子重組</button>
+              <button class="qt-btn" data-qt="read">6. 短長文閱讀題組</button>
+            </div>
+            <div class="qt-stage" id="qt-stage"></div>
+          </div>
+        </div>
+
+        <!-- 子視圖 B：能力指標對照表 -->
+        <div id="guide-inds" class="guide-pane">
+          <div class="inds-columns">
+            <!-- 第一階段 -->
+            <div class="ind-col glass theme-b1">
+              <div class="ind-col-head">
+                <span class="ind-step">第一學習階段（低年級）</span>
+                <h3>🍀 永無島的初次飛翔</h3>
+                <small>共 11 項核心指標・3 大劇情關卡</small>
+              </div>
+              <div class="ind-list">
+                <div class="ind-group">
+                  <h4>第一關：精靈山谷的仙塵步道</h4>
+                  <ul>
+                    <li><code>3-Ⅰ-1</code> 正確念出並拼讀注音符號</li>
+                    <li><code>3-Ⅰ-2</code> 運用注音符號輔助識字與分辨易混聲韻</li>
+                    <li><code>3-Ⅰ-3</code> 運用注音符號表達想法與語氣</li>
+                    <li><code>4-Ⅰ-5</code> 掌握基本筆畫名稱、筆順規則與字形結構</li>
+                  </ul>
+                </div>
+                <div class="ind-group">
+                  <h4>第二關：失落男孩的樹屋派對</h4>
+                  <ul>
+                    <li><code>4-Ⅰ-1</code> 認識常用國字、量詞與疊字詞彙</li>
+                    <li><code>4-Ⅰ-2</code> 利用部首與部件輔助識字與歸類</li>
+                    <li><code>4-Ⅰ-3</code> 學習查字典的方法（部首與筆畫檢索）</li>
+                    <li><code>四字語詞</code> 認識日常生活常見基礎四字語詞</li>
+                  </ul>
+                </div>
+                <div class="ind-group">
+                  <h4>第三關：沙灘上的滴答腳印</h4>
+                  <ul>
+                    <li><code>5-Ⅰ-2</code> 認識常用標點符號（句號、問號、驚嘆號等）</li>
+                    <li><code>5-Ⅰ-3</code> 讀懂課文與短文內容，提取關鍵訊息</li>
+                    <li><code>5-Ⅰ-7</code> 認識基本句型結構與常用連接詞</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- 第二階段 -->
+            <div class="ind-col glass theme-b2">
+              <div class="ind-col-head">
+                <span class="ind-step">第二學習階段（中年級）</span>
+                <h3>🗺️ 永無島的失落篇章</h3>
+                <small>共 11 項核心指標・3 大劇情關卡</small>
+              </div>
+              <div class="ind-list">
+                <div class="ind-group">
+                  <h4>第一關：虎蓮公主的刺青解密</h4>
+                  <ul>
+                    <li><code>4-Ⅱ-2</code> 利用共同部件推論字音與字義關聯</li>
+                    <li><code>4-Ⅱ-3</code> 熟練部首與音序檢索法查字辭典</li>
+                    <li><code>4-Ⅱ-4</code> 分辨形近字、音近字與多音字詞</li>
+                  </ul>
+                </div>
+                <div class="ind-group">
+                  <h4>第二關：海盜史密的混亂告示牌</h4>
+                  <ul>
+                    <li><code>4-Ⅱ-1</code> 認識常用國字與擴充進階詞彙量</li>
+                    <li><code>4-Ⅱ-5</code> 利用字義推論詞義、近義詞與反義詞辨析</li>
+                    <li><code>四字語詞</code> 理解並運用中年級核心成語與四字語詞</li>
+                  </ul>
+                </div>
+                <div class="ind-group">
+                  <h4>第三關：隱密樹屋的對聯機關</h4>
+                  <ul>
+                    <li><code>5-Ⅱ-2</code> 理解頓號、引號、冒號等標點符號用法</li>
+                    <li><code>5-Ⅱ-4</code> 掌握句型結構、複句連接與句子重組</li>
+                    <li><code>5-Ⅱ-5</code> 認識記敘、說明等不同文本特徵與基礎修辭</li>
+                    <li><code>5-Ⅱ-6</code> 運用歸納策略摘取段落大意</li>
+                    <li><code>5-Ⅱ-8</code> 閱讀短文並進行文意推論與理解</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- 第三階段 -->
+            <div class="ind-col glass theme-b3">
+              <div class="ind-col-head">
+                <span class="ind-step">第三學習階段（高年級）</span>
+                <h3>⚓ 永無島的黃昏</h3>
+                <small>共 11 項核心指標・4 大劇情關卡</small>
+              </div>
+              <div class="ind-list">
+                <div class="ind-group">
+                  <h4>第一關：印第安部落的危機</h4>
+                  <ul>
+                    <li><code>4-Ⅲ-1</code> 認識常用國字、精熟多音字與易混淆字</li>
+                    <li><code>4-Ⅲ-2</code> 分析字形結構、六書造字原則與部件</li>
+                    <li><code>4-Ⅲ-3</code> 運用辭典擴充詞彙，辨析詞義褒貶與詞性</li>
+                    <li><code>四字語詞</code> 精熟高年級高階成語典故與語境運用</li>
+                  </ul>
+                </div>
+                <div class="ind-group">
+                  <h4>第二關：迷霧森林的考驗</h4>
+                  <ul>
+                    <li><code>5-Ⅲ-2</code> 理解破折號、刪節號、分號等標點表達效果</li>
+                    <li><code>5-Ⅲ-3</code> 辨析複合修辭（譬喻、轉化、排比、借代、設問）與句型</li>
+                  </ul>
+                </div>
+                <div class="ind-group">
+                  <h4>第三關：骷髏礁石窟的尾隨者</h4>
+                  <ul>
+                    <li><code>5-Ⅲ-4</code> 區分文本中的「客觀事實」與「主觀觀點」</li>
+                    <li><code>5-Ⅲ-5</code> 認識議論文本特徵（論點、論據、論證）</li>
+                    <li><code>5-Ⅲ-6</code> 運用摘要策略掌握篇章結構與主旨</li>
+                  </ul>
+                </div>
+                <div class="ind-group">
+                  <h4>第四關：快樂羅傑號的終極對決</h4>
+                  <ul>
+                    <li><code>5-Ⅲ-8</code> 結合上下文進行因果推論、言外之意與批判思辨</li>
+                    <li><code>5-Ⅲ-11</code> 廣泛閱讀多元文本題組，進行跨段落整合比較</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="js/portal.js?v=1"></script>
+</body>
+</html>
