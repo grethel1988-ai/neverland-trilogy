@@ -11,14 +11,18 @@
     4. `🎮 玩法與課綱指標`：介紹三種難度、夥伴防弊回饋、教育部標準標楷體五大互動題型展示台，以及 108 課綱國語文第一至第三學習階段共 33 項能力指標三欄對照表（頂部三行標題置中）。
   - 全站所有對話框圓形人物頭像與同行夥伴小圓頭像皆透過 CSS `transform: scale(...)` 與個別角色 `transform-origin` 對焦，只顯示清晰的角色頭部特寫。
 
-## 上次做到哪（2026-11-15）
+## 上次做到哪（2026-11-21）
 - 完成總入口網站建置：`index.html`、`css/style.css`、`js/portal.js`、`README.md`、`.gitignore`、`.nojekyll` 及 `assets/img/*.webp`（含三部曲封面 `cover1.webp`、`cover2.webp`、`cover3.webp`）。
 - 依據使用者視覺回饋完成多輪版面精修（移除多餘副標與按鈕、調整左上角主標題、使用 Container Queries `cqi`/`cqh` 放大各頁籤卡片圖文以貼合畫框、修正角色設定文字與頭部特寫裁切）。
-- 完成 `git init` 本地版本控制與初始提交。
+- 2026-11-21：建立 GitHub 公開儲存庫並啟用 GitHub Pages 線上部署：
+  - **GitHub Repo**：`https://github.com/grethel1988-ai/neverland-trilogy`
+  - **GitHub Pages**：`https://grethel1988-ai.github.io/neverland-trilogy/`
+- 2026-11-21：修正 `js/portal.js` 中 `typeText` 共用單一 `typeTimer` 導致初始化時首頁底部彼得潘導覽對話被角色圖鑑初始化中斷而留白的問題（改以 `WeakMap` 依元素各自管理計時器，資源版本號升至 `?v=2`）。
+- 2026-11-21：透過 Headless Chrome + CDP 擷取總入口網站 6 個主要畫面（`1600×900`）並拼接高解析度總覽圖（`D:\永無島三部曲\畫面設計總覽-總網站.png`）。
 
 ## 下一步
-- 確認是否要將 `永無島三部曲總網站` 推送至 GitHub 公開 Repository（例如 `neverland-trilogy`）並啟用 GitHub Pages 線上部署。
-- 若需擷取總入口網站的畫面總覽圖，可沿用 Headless Chrome 腳本擷取四大頁籤。
+- 實機（桌機／平板／手機）開啟線上總入口網站測試三大部曲跳轉與響應式排版。
+- 課堂實際施測與依師生回饋微調內容。
 
 ## 踩坑與注意事項
 - Windows 環境下預設 `python` 為 WindowsApps 假捷徑，執行 Python 腳本需使用 `py -X utf8` 或 `C:\Users\User\AppData\Local\Python\bin\python.exe -X utf8`。

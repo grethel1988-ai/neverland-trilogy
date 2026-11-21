@@ -429,16 +429,17 @@ const QTYPE_DEMOS = {
   }
 };
 
-/* ---------- 打字機效果 ---------- */
-let typeTimer = null;
+/* ---------- 打字機效果（依元素各自管理計時器，避免初始化互相覆蓋） ---------- */
+const typeTimers = new WeakMap();
 function typeText(el, text, speed = 22) {
-  clearInterval(typeTimer);
+  clearInterval(typeTimers.get(el));
   el.textContent = '';
   let k = 0;
-  typeTimer = setInterval(() => {
+  const tid = setInterval(() => {
     el.textContent = text.slice(0, ++k);
-    if (k >= text.length) clearInterval(typeTimer);
+    if (k >= text.length) clearInterval(tid);
   }, speed);
+  typeTimers.set(el, tid);
 }
 
 /* ---------- 背景切換 ---------- */
